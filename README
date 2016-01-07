@@ -1,0 +1,33 @@
+
+A PHP project using an imported seeder to populate a mysql database while using sockets to create a realtime-feed feature.
+
+Once my database was seeded with names and words, I randomly picked users and words to be paired up and displayed this information every 5 seconds. I also created a list of words (blockedwords) that will not appear as the words that were paired up with the names.
+
+Sockets: 
+- get all users(names), blocked words, and words from db and store in arrays
+- check blockedwords versus words and display those words that are NOT contained within each other
+- create an interval function to control the amount of information to be displayed with a specific time
+
+Components needed:
+-composer
+-faker
+-Seeder class
+ Imported a seeder class from  Kenji Suzuki (<https://github.com/kenjis>) 
+
+My Users database table has the following columns:
+- id 
+- full_name
+- email 
+- city 
+- created_at
+***Only full_name needed for this project***
+
+My Words database table has the following columns: 
+- id
+- word
+- created_at
+
+My BlockedWords database table has the following columns: 
+- id
+- word
+
