@@ -59,8 +59,8 @@ server.listen(port, function () {
 
    setInterval(function(){
     var client_messages = [];
-
-    for(var i = 0; i < 500; i++){
+    //Limit for info
+    for(var i = 0; i < 1000; i++){
      var word = get_word();
      client_messages.push({
       name: users[Math.floor(Math.random() * users.length) + 1 - 1],
